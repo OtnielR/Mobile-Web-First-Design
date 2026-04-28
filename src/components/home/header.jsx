@@ -33,7 +33,7 @@ export default function Header() {
                                 <p className="text-xs line-clamp-3">{popularArticle.content}</p>
                             </div>
                         </div>
-                        <img className="w-full h-52 object-center object-cover" src={getImageUrl(popularArticle.image_url)} alt="" />
+                        <img loading="lazy" className="w-full h-52 object-center object-cover" src={getImageUrl(popularArticle.image_url)} alt="" />
                     </Link>
                     : <Loading />
                 }

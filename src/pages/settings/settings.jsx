@@ -65,11 +65,11 @@ export default function Settings() {
                     </div>
                     <div className="flex flex-col gap-3 px-2 text-md text-slate-900 dark:text-slate-100">
                         <div className="flex justify-between items-center mb-3 border-b border-b-slate-900 dark:border-b-slate-100 pb-3">
-                            <p>
+                            <label htmlFor="theme">
                                 Theme
-                            </p>
+                            </label>
                             <div>
-                                <select className="w-32 border px-1 py-1 rounded-lg outline-none" onChange={handleThemeChange} defaultValue={theme} name="" id="">
+                                <select className="w-32 border px-1 py-1 rounded-lg outline-none" onChange={handleThemeChange} defaultValue={theme} name="theme" id="theme">
                                     <option className="dark:bg-slate-900" value="light">Light</option>
                                     <option className="dark:bg-slate-900" value="dark">Dark</option>
                                     <option className="dark:bg-slate-900" value="system">System</option>
@@ -78,11 +78,11 @@ export default function Settings() {
                         </div>
                         {genres ?
                             <div className="flex justify-between items-center mb-3 border-b border-b-slate-900 dark:border-b-slate-100 pb-3">
-                                <p>
+                                <label htmlFor="category">
                                     Category
-                                </p>
+                                </label>
                                 <div>
-                                    <select className="w-32 border px-1 py-1 rounded-lg outline-none" onChange={handleCategoryChange} defaultValue={category} name="" id="">
+                                    <select className="w-32 border px-1 py-1 rounded-lg outline-none" onChange={handleCategoryChange} defaultValue={category} name="category" id="category">
                                         {genres.map((genre, i) => (
                                             <option className="dark:bg-slate-900" key={i}>{genre.title}</option>
                                         ))}

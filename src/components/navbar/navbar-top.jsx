@@ -15,7 +15,7 @@ export default function NavbarTop() {
 
                     </div>
                     <div className="">
-                        <button onClick={() => navigate(-1)} className="outline-none rounded-xl p-2 transition-all duration-300 hover:bg-gray-200 dark:hover:bg-slate-700 hover:cursor-pointer text-slate-900 dark:text-slate-100">
+                        <button onClick={() => navigate(-1)} className="outline-none rounded-xl p-2 transition-all duration-300 hover:bg-gray-200 dark:hover:bg-slate-700 hover:cursor-pointer text-slate-900 dark:text-slate-100" aria-label="back">
                             <ArrowLeft />
                         </button>
                     </div>

@@ -60,10 +60,10 @@ export default function Discover() {
                     if (selectedCategory) {
                         categoryId = selectedCategory.id
                     } else {
-                        categoryId = null
+                        categoryId = ""
                     }
 
-                    const articleResponse = await getArticle(nextPage, perPage, null, searchRef.current.value, categoryId == null ? "" : categoryId)
+                    const articleResponse = await getArticle(nextPage, perPage, null, searchRef.current.value, categoryId)
 
                     console.log(articleResponse)
 
@@ -115,7 +115,6 @@ export default function Discover() {
                 setArticles(articleResponse.data)
                 setHasMoreData(true)
                 setPage(1)
-
             }
         }, 500)
     }
@@ -136,12 +135,9 @@ export default function Discover() {
             setArticles(articleResponse.data)
         }
 
-
         setPage(1)
 
         setHasMoreData(true)
-
-
     }
 
 
@@ -153,11 +149,9 @@ export default function Discover() {
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-3 px-4">
                         <div className="flex gap-3 items-center w-full px-4 py-1 border border-gray-600 text-slate-900 dark:text-slate-100 dark:border-gray-200 rounded-full">
-
                             <input className="outline-none flex-1 px-2 py-1   text-slate-900 dark:text-slate-100 rounded-lg" type="text" placeholder="Search..." ref={searchRef} onInput={onInputChange} />
 
                             <Search className="flex-none text-slate-900 dark:text-slate-100" />
-
                         </div>
                         <div className="flex flex-col gap-3 text-slate-900 dark:text-slate-100">
                             {genres ?
@@ -215,8 +209,6 @@ export default function Discover() {
                             <Loading />
                         </div>
                         : <div></div>}
-
-
                 </div>
             </Main>
             <NavbarBottom />

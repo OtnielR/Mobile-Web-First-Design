@@ -50,7 +50,7 @@ export default function ContentRecommendation() {
                                                     <p className="text-xs line-clamp-3">{article.content}</p>
                                                 </div>
                                             </div>
-                                            <img className="w-full h-full object-center object-cover" src={getImageUrl(article.image_url)} alt="" />
+                                            <img loading="lazy" className="w-full h-full object-center object-cover" src={getImageUrl(article.image_url)} alt="" />
 
 
                                         </Link>

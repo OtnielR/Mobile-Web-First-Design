@@ -30,7 +30,7 @@ export default function Bookmarked() {
                     </div>
                     <div className="flex flex-col gap-4 text-slate-900 dark:text-slate-100">
                         {bookmarkedArticle.map((article, i) => (
-                            <div ey={i} className="flex flex-col gap-4 px-2 py-4 shadow-sm dark:shadow-slate-700 rounded-lg">
+                            <div key={i} className="flex flex-col gap-4 px-2 py-4 shadow-sm dark:shadow-slate-700 rounded-lg">
                                 <div >
                                     <img className="rounded-xl w-full h-38 object-cover object-center" src={getImageUrl(article.image_url)} alt="" />
                                 </div>
