@@ -15,6 +15,15 @@
     } else {
       document.documentElement.classList.remove('dark');
     }
+
+    window.addEventListerner("online", function () {
+      window.location.href = "index.html"
+    })
+
+    if (navigator.onLine) {
+      window.location.href = "index.html"
+    }
+
   </script>
 
 </head>
